@@ -1,3 +1,12 @@
 var mongoose = require('mongoose');
-// optional shortcut to the mongoose.Schema class
 var Schema = mongoose.Schema;
+const destinationSchema = new Schema({
+    station: {
+        type: String,
+        enum: ['NAIROBI', 'MOMBASA',]
+    },
+    arrival: Date
+});
+
+
+
