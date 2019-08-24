@@ -8,7 +8,7 @@ const destinationSchema = new Schema({
     arrival: Date
 });
 
-var studentSchema = new mongoose.Schema({
+var expressSGRSchema = new mongoose.Schema({
     name: String,
     email: String,
     cohort: String,

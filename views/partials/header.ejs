@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <nav>
+        <a href="" class="">recipe logo</a>
+        <!-- new html below -->
+        <ul class="right">
+          <li>
+          <% if (user) { %>
+            <a href="/logout"><i class=""></i>Log Out</a>
+          <% } else { %>
+            <a href="/auth/google"><i class=""></i>Login with Google</a>
+          <% } %>
+          </li>
+        </ul>
+    </nav>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
