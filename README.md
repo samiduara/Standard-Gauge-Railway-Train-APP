@@ -10,6 +10,10 @@
 
 ## Next Steps
 
-<<<<<<< HEAD
+#WIREFRAME
 ![Wireframe](https://i.imgur.com/1ONRDz7.png)
-=======
+
+![Wireframe](https://i.imgur.com/LilOrqm.png)
+
+
+![ERD](https://i.imgur.com/8G7NRbd.png)
