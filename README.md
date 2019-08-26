@@ -10,6 +10,4 @@
 
 ## Next Steps
 
-<<<<<<< HEAD
 ![Wireframe](https://i.imgur.com/1ONRDz7.png)
-=======
