@@ -1,8 +1,29 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.topnav {
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+
+.topnav a:hover {
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: RED;
+  color: blue;
 }
