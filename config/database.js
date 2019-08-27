@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var db = mongoose.connection;
 
-mongoose.connect('mongodb://localhost/27017expressSGR',
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/27017/train',
     {useNewUrlParser: true, useCreateIndex: true}
 );
 

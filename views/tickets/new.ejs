@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create a New Ticket</title>
+</head>
+<body>
+    <h1>Add a new Ticket</h1>
+    <a href="/">Go to Home Screen</a>
+    <a href="/Train/<%= Train._id %>">Back to Train Details</a>
+    <a href="/Train">Back to Train Schedule</a>
+    <hr>
+    <form action="/Train/<%= Train._id %>/tickets" method="POST">
+        <input type="number" name="price" min="0">
+        <input type="submit" value="Add Ticket">
+    </form>
+</body>
+</html>

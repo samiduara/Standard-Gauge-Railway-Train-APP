@@ -5,15 +5,16 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
     <p>Welcome to Express Standard Gauge Railway - Online Booking <%=  %></p>
     <div class="topnav">
         <a class="active" href="#HOME">HOME</a>
-        <a href="#FROM">FROM</a>
-        <a href="#TO">TO</a>
+        <a href="/Train">TRAINS SCHEDULE</a>
         <a href="#DEPARTURE">DEPARTURE</a>
-        <a href="/auth/google"><i class="material-icons left"></i>Login</a>
-    <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+        <% if(user) { %>
+          <a href="/logout"><i class="material-icons left"></i>Log Out</a>
+        <% } else { %>
+          <a href="/auth/google"><i class="material-icons left"></i>Login</a>
+        <% } %>
       </div>
   </body>
 </html>

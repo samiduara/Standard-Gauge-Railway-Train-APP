@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+// Will need to add tickets and seats
+var ticketSchema = new Schema({
+    seat: {
+        type: String,
+    },
+    price: {
+        type: Number,
+        min: 0
+    },
+    train: [{type: Schema.Types.ObjectId, ref: 'Train'}]
+}, { timestamps: true });
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-module.exports = router;
+module.exports = mongoose.model('Ticket', ticketSchema);
