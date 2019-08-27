@@ -4,6 +4,7 @@ var expressSGRCtrl = require('../controllers/expressSGRs');
 
 
 router.get('/', expressSGRCtrl.index);
+
 router.post('/facts', isLoggedIn, expressSGRsCtrl.addFact);
 function isLoggedIn(req, res, next) {
     if ( req.isAuthenticated() ) return next();
