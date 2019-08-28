@@ -1,4 +1,4 @@
-var Train = require('../models/Train');
+var Train = require('../models/train');
 var Ticket = require('../models/tickets');
 
 module.exports = {
