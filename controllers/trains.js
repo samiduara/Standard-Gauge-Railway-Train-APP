@@ -6,6 +6,7 @@ module.exports = {
     new: newTrain,
     create,
     show,
+    deleteTrains,
     addFact
 };
 
@@ -26,6 +27,13 @@ function show(req, res) {
         })
     });
 }
+function deleteTrains(req, res) {
+    Flight.findByIdAndDelete(req.params.id, function(err, flight){
+      if (err) return res.redirect('/flights');
+        console.log(flight);
+      res.redirect('/flights');
+    });
+  };
 
 function newTrain(req, res) {
     res.render('trains/new'); 
