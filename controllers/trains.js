@@ -11,24 +11,24 @@ module.exports = {
 };
 
 function index(req, res) {
-    Train.find({}, function(err, Train) {
-        res.render('trains/index', {Train});
+    Train.find({}, function(err, train) {
+        res.render('trains/index', {train});
     });
 }
 
 function show(req, res) {
-    Train .findById(req.params.id, function(err, Train) {
-        Ticket.find({Train: Train._id }, function(err, tickets) {
-            res.render('Train/show', {
+    Train.findById(req.params.id, function(err, train) {
+        Ticket.find({train: train._id}, function(err, tickets) {
+            res.render('trains/show', {
                 title: 'Train Detail',
-                Train,
+                train,
                 tickets
             });
         })
     });
 }
 function deleteTrains(req, res) {
-    Flight.findByIdAndDelete(req.params.id, function(err, flight){
+    train.findByIdAndDelete(req.params.id, function(err, trains){
       if (err) return res.redirect('/flights');
         console.log(flight);
       res.redirect('/flights');

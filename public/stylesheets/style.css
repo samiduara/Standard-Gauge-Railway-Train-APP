@@ -5,6 +5,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.trains {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('https://i.imgur.com/AiFbyHu.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aqua;
+}
 
 .topnav {
   overflow: hidden;

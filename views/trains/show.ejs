@@ -9,13 +9,13 @@
 <body>
     <h1><%= title %></h1>
     <a href="/">Go Back Home</a>
-    <a href="/Train">Back to all ExpressSGRs</a>
-    <a href="/Train/<%= Train.id %>/tickets/new">Add a Ticket to this Train</a>
+    <a href="/train">Back to all ExpressSGRs</a>
+    <a href="/train/<%= train.id %>/tickets/new">Add a Ticket to this Train</a>
     <hr>
-    <h3><%=Train.expressSGR %></h3>
-    <p><%= Train.TrainNo %></p>
-    <p><%= Train.departs %></p>
-    <p><%= Train.station %></p>
+    <h3><%=train.expressSGR %></h3>
+    <p><%= train.trainNo %></p>
+    <p><%= train.departs %></p>
+    <p><%= train.station %></p>
     
     <h5>Tickets Associated With This Train</h5>
     <% tickets.forEach(function(t) { %>
@@ -23,15 +23,15 @@
         <p>$<%= t.price%></p>
     <% }) %>
 
-    <% if(Train.destinations.length > 0) { %>
-        <% Train.destinations.forEach(function(d) { %>
+    <% if(train.destinations.length > 0) { %>
+        <% train.destinations.forEach(function(d) { %>
             <p><%= d.station %></p>
             <p><%= d.arrival %></p>
         <% }) %>
     <% } else { %>
         <p>There are no destinations for this Train</p>
     <% } %>
-    <form action="/Train/<%= Train._id %>/destinations" method="POST">
+    <form action="/train/<%= train._id %>/destinations" method="POST">
         <select name="station">
             <option value="Nairobi">Nairobi</option>
             <option value="Mombasa">Mombasa</option>

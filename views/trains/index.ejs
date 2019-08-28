@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
     <title>Train</title>
 </head>
-<body>
+<body class="trains">
+
     <h1>Train Express SGR</h1>
 
     <a href="/trains/new">Add a New Train to the List</a>
     <a href="/">Go Back Home</a>
 
-    <% Train.forEach(function(Train) { %>
+    <% train.forEach(function(Train) { %>
         <p>
-            <%= Train.Train %> | <%= Train.station %> | 
-            <%= Train.TrainNo %> | <%= Train.departs %> |
-            <a href="/Train/<%= Train._id %>">Details</a>
+            <%= train.Train %> | <%= Train.station %> | 
+            <%= train.TrainNo %> | <%= Train.departs %> |
+            <a href="/trains/<%= Train._id %>">Details</a>
         </p>
    <% }) %>
 </body>
