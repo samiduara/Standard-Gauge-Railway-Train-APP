@@ -5,7 +5,7 @@
  */
 
 var app = require('../server');
-var debug = require('debug')('Train:server');
+var debug = require('debug')('starndard-gauge-railway:server');
 var http = require('http');
 
 /**
