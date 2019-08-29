@@ -5,9 +5,10 @@ create,
 }
 function create(req, res) {
     Train.findById(req.params.id, function(err, train){
-        train.stations.push(req.body);
+        console.log("train", train)
+        train.destinations.push(req.body);
         train.save(function(err){
-            res.redirect(`/trains${train._id}`);
+            res.redirect(`/trains/${train._id}`);
         });
     });
  }

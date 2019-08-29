@@ -9,8 +9,8 @@
 <body>
     <h1><%= title %></h1>
     <a href="/">Go Back Home</a>
-    <a href="/train">Back to all ExpressSGRs</a>
-    <a href="/train/<%= train.id %>/tickets/new">Add a Ticket to this Train</a>
+    <a href="/trains">Back To Train Destinations</a>
+    <a href="/trains/<%= train.id %>/tickets/new">Add a Ticket to this Train</a>
     <hr>
     <h3><%=train.expressSGR %></h3>
     <p><%= train.trainNo %></p>
@@ -31,13 +31,16 @@
     <% } else { %>
         <p>There are no destinations for this Train</p>
     <% } %>
-    <form action="/train/<%= train._id %>/destinations" method="POST">
+    <form action="/trains/<%= train._id %>/destinations" method="POST">
         <select name="station">
             <option value="Nairobi">Nairobi</option>
             <option value="Mombasa">Mombasa</option>
         </select>
         <input type="datetime-local" name="arrival">
         <input type="submit" value="Add Destination">
+    </form>
+        <form action="/trains/<%= train._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
     </form>
 </body>
 </html>

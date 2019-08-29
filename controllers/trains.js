@@ -6,7 +6,7 @@ module.exports = {
     new: newTrain,
     create,
     show,
-    deleteTrains,
+    delete: deleteTrains,
     addFact
 };
 
@@ -20,18 +20,30 @@ function show(req, res) {
     Train.findById(req.params.id, function(err, train) {
         Ticket.find({train: train._id}, function(err, tickets) {
             res.render('trains/show', {
-                title: 'Train Detail',
+                title: 'train Detail',
                 train,
                 tickets
             });
         })
     });
 }
+
+function addTicket(req, res) { 
+    train.findById(req.params.id, function(err, train) {
+        Ticket.find({}, function(err, tickets) {
+            console.log(tickets);
+            console.log(train);
+            res.render('tickets/new', {title: 'Add Ticket', tickets, train});
+        });
+    });
+};
+
+
 function deleteTrains(req, res) {
-    train.findByIdAndDelete(req.params.id, function(err, trains){
-      if (err) return res.redirect('/flights');
-        console.log(flight);
-      res.redirect('/flights');
+    Train.findByIdAndDelete(req.params.id, function(err, train){
+      if (err) return res.redirect('/trains');
+        console.log(train);
+      res.redirect('/trains');
     });
   };
 
@@ -45,7 +57,7 @@ function create(req, res) {
         req.body[key] === '' && delete req.body[key];
     }
     if (req.body.destination) {
-        destination = { station: req.body.destination }
+        destination = req.body.destination 
         delete req.body["destination"];
     }
     Train.create(req.body, function(err, train) {

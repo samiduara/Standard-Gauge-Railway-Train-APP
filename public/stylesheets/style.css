@@ -7,11 +7,12 @@ body {
 }
 .trains {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: url('https://i.imgur.com/AiFbyHu.jpg');
+  font-family: Arial, Helvetica, sans-serif;color: red;
+  background: url('https://i.imgur.com/y6nsqqW.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  color: aqua;
+  color: yellow;
+  
 }
 
 .topnav {
@@ -39,3 +40,13 @@ body {
   color: blue;
 }
 
+a {
+  padding: 10px;
+}
+a {
+  padding: 10px;
+  color: red;
+}
+.show {
+  padding: 10px;
+}

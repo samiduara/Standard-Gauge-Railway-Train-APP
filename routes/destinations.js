@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var destinationCtrl = require('../controllers/stations');
+var destinationCtrl = require('../controllers/destinations');
 
-router.post('/trains/:id/destination', destinationCtrl.create);
+router.post('/trains/:id/destinations', destinationCtrl.create);
 
 
 module.exports = router;
